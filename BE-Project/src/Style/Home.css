@@ -1,0 +1,24 @@
+/* Home.css */
+@media (min-width: 1200px) {
+    .custom-img-lg {
+      width: 80%;
+      max-width: 600px; /* Adjust the max-width as needed */
+      /* Add any other styles you want for larger screens */
+    }
+  }
+  
+/* AnimatedCardButtons.css */
+.animated-card {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    perspective: 1000px;
+  }
+  
+  .animated-card:hover {
+    transform: scale(1.1);
+  }
+  

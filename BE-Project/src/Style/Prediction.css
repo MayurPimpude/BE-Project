@@ -1,0 +1,71 @@
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+    background-color: #ececec;
+  }
+  
+  .box-layout {
+    border: 2px solid #ccc;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #123C69;
+  }
+  
+  .center-form {
+    flex-direction: row;
+    
+  }
+
+  /* .input{
+    border-radius: 3px;
+    background-color: #FBBFBE;
+    color: 'black';
+  } */
+
+  .upload-button{
+    margin-top: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #AC3B61;
+  }
+
+  .filename{
+    margin-top: 20px;
+    color:white;
+  }
+
+  /* styles.css */
+
+.file-upload-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .file-input {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  .custom-file-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AC3B61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Optional: Add hover effect for better user experience */
+  .custom-file-button:hover {
+    background-color: #2980b9;
+  }
+  
+  
