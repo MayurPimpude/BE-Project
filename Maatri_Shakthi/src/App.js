@@ -11,9 +11,7 @@ import DLogin from './components/DLogin.jsx';
 import DRegister from './components/DRegister.jsx';
 import ULogin from './components/ULogin.jsx';
 import URegister from './components/URegister.jsx';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import Dashboard from './Components/Dashboard';
-// import Implementation from './Components/Implementation';
+
 
 
 function App() {
@@ -41,38 +39,3 @@ function App() {
 }
 
 export default App;
-
-// import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
-
-// function App() {
-//     const [data, setData] = useState(null);
-//     const [isLoading, setIsLoading] = useState(false);
-//     const [error, setError] = useState(null);
-
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             setIsLoading(true);
-//             try {
-//                 const response = await axios.get('http://localhost:5000/get-data');
-//                 setData(response.data);
-//             } catch (error) {
-//                 setError(error);
-//             } finally {
-//                 setIsLoading(false);
-//             }
-//         };
-
-//         fetchData();
-//     }, []);
-
-//     return (
-//         <div>
-//             {isLoading && <p>Loading data...</p>}
-//             {error && <p>Error: {error.message}</p>}
-//             {data && <p>Data from Flask: {JSON.stringify(data)}</p>}
-//         </div>
-//     );
-// }
-
-// export default App;

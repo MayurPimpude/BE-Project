@@ -51,9 +51,6 @@ def check_csv_columns(file_path):
     except Exception as e:
         return False, str(e)
 
-# @app.route('/')
-# def index():
-#     return render_template('home.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -86,6 +83,33 @@ def upload_file():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+
+@app.route('/submit', methods=['POST'])
+def submit_form():
+    data = request.json
+    df =  pd.DataFrame.from_dict(data, orient="index")
+    print(df.iloc[4:16])
+
+ 
+    df1 = df.iloc[4:16]
+
+    
+    float_data = [int(value[0]) for value in df1.values]
+
+    # print(df1[0])
+    print('####')
+    print(float_data)
+
+    float_data = [float_data]
+
+    predictions = make_prediction(float_data)
+    print(predictions)
+
+    if(predictions == [0]):
+        return jsonify({'detection': 'Healthy'})
+    else:
+         return jsonify({'detection': 'Malnutrion Detected'})
 
 if __name__ == '__main__':
     app.run(debug=True)
